@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <h1>&#9925; OWeather</h1>
+    <!-- Search form: type a city name and press Enter or click Search -->
+    <form id="searchForm">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter a city name..."
+        autocomplete="off"
+      >
+      <button type="submit">Fetch</button>
+      <button type="button" id="locationButton" title="Use my current location">&#128205;</button>
+    </form>
+
+    <!-- Shown while we are waiting for the API to respond -->
+    <p id="loadingMessage" class="loading-message" hidden>Loading weather...</p>
+
+    <!-- Shown if the city isn't found or something goes wrong -->
+    <p id="errorMessage" class="error-message" hidden></p>
+
+    <!-- The weather result card. Hidden until we have data to show. -->
+    <section id="weatherCard" class="weather-card" hidden>
+      <div class="weather-card__top">
+        <div>
+          <h2 id="cityName"></h2>
+          <p id="dateText" class="date-text"></p>
+        </div>
+        <img id="weatherIcon" class="weather-icon" alt="">
+      </div>
+
+      <p id="temperature" class="temperature"></p>
+      <p id="description" class="description"></p>
+
+      <div class="weather-card__details">
+        <div class="detail">
+          <span class="detail__label">Feels like</span>
+          <span id="feelsLike" class="detail__value"></span>
+        </div>
+        <div class="detail">
+          <span class="detail__label">Humidity</span>
+          <span id="humidity" class="detail__value"></span>
+        </div>
+        <div class="detail">
+          <span class="detail__label">Wind</span>
+          <span id="wind" class="detail__value"></span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
