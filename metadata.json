@@ -1,0 +1,8 @@
+{
+  "name": "OWeather",
+  "description": "Weather application providing current weather conditions, 5-day forecast, temperature, humidity, wind speed, pressure, visibility, and feels-like temperature by city search or geolocation.",
+  "prompt": "Weather App",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
